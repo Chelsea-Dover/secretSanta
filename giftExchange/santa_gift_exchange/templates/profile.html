@@ -1,0 +1,25 @@
+
+{% extends "base.html" %}
+
+
+{% block content %}
+    <body>
+        <h1>{{ user }}</h1>
+
+        {% if user_id == user_nameid %}
+                <ul>
+                    {% for x, y in test %}
+                        <li>
+                            <a href="/exchange/{{ y.id }}"><p>Exchange name: {{ y.group_name }}</p></a>
+                            <a href="/profile/{{ x.giving.giveruser.id }}/"><p>Assigned person: {{ x.giving.giveruser }}</p></a>
+                        </li>
+                    {% endfor %}
+                </ul>
+        {% endif %}
+
+    </body>
+    
+{% endblock %}
+
+{% block script_tags %}
+{% endblock %}

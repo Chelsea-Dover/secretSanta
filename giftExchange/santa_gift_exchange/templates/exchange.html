@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load staticfiles %}
+<body>
+    <div class="groupNum">
+        <p>Invite Friends!</p>
+        <p id="{{ id }}">secret code: afkws{{ id }}xfec</p>
+    </div>
+    <!--{{ exchanges.elf.giveruser.name }}-->
+
+    <p>Group name: {{ exchanges.group_name }}</p>
+
+    <ul class="people">
+        {% for i in elf %}
+            <li class="{{ i.id }}">
+                <p class="{{ i.id }}" >{{ i.giveruser.username }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <form id="post-assign" class="form" action="/exchange/link/" method="post">
+        <input class="button" type="submit" value="Assign secret santas!" />
+    </form>
+
+
+</body>
+{% endblock %}
+
+{% block script_tags %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/linkTogether.js' %}"></script>
+{% endblock %}
