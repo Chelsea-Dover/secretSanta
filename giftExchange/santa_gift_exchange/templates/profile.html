@@ -3,23 +3,133 @@
 
 
 {% block content %}
+{% load staticfiles %}
     <body>
-        <h1>{{ user }}</h1>
+        <h1 class="profileUser">{{ username }}</h1>
 
         {% if user_id == user_nameid %}
-                <ul>
+                <ul class="exchanges">
+                    <li class="listheader">
+                        <h3>Exchanges</h3>
+                    </li>
                     {% for x, y in test %}
-                        <li>
+                        <li class="exchangelist">
                             <a href="/exchange/{{ y.id }}"><p>Exchange name: {{ y.group_name }}</p></a>
+                            {% if user_id == user_nameid %}
+                                <button class="sentbutton"> Sent gift </button>
+                            {% endif %}
                             <a href="/profile/{{ x.giving.giveruser.id }}/"><p>Assigned person: {{ x.giving.giveruser }}</p></a>
                         </li>
                     {% endfor %}
                 </ul>
         {% endif %}
+        <main>
+
+
+            <!-- Address -->
+            <section>
+                <h3>
+                    Contact info
+                </h3>
+                    {{ iuser.address }}
+                {% if user_id == user_nameid %}
+                    <button class="infoButton">edddiiittt</button>
+                {% endif %}
+            </section>
+
+
+
+
+            <!-- Edit address -->
+
+            <section class="editAddressWrapper">
+                <form id="editAddress" method="post">
+                    {% csrf_token %}
+
+                    <label for="address">Edit address</label>
+                    <textarea id="address" rows="4" cols="50">{{ iuser.address }}</textarea>
+
+                    <button class="addressButton" type="submit">
+                        edit
+                    </button>
+                </form>
+            </section>
+
+            <!-- Likes -->
+
+
+            <section class="likes">
+                <h3>
+                    Likes
+                </h3>
+                {{ iuser.likes }}
+                {% if user_id == user_nameid %}
+                    <button class="likesButton"> edittttt </button>
+                {% endif %}
+            </section>
+
+
+
+            <!-- Edit Likes -->
+
+            <section class="editlikeWrapper">
+                <form id="editLikes" method="post">
+                    {% csrf_token %}
+
+                    <label for="likes">Edit likes</label>
+                    <textarea id="likes" rows="4" cols="50">{{ iuser.likes }}</textarea>
+
+                    <input class="button" type="submit" value="finish editing!" />
+
+                </form>
+            </section>
+
+            <!-- Dislikes -->
+
+
+
+            <section>
+                <h3>
+                    Dislikes
+                </h3>
+                <p class="dislikes">
+                    {{ iuser.dislikes }}
+                </p>
+                {% if user_id == user_nameid %}
+                    <button class="dislikeButton">edddiiittt</button>
+                {% endif %}
+            </section>
+
+
+
+
+            <!-- Edit dislikes-->
+
+            <section id="dislikeId" class="editDislikeWrapper">
+                <form id="editDislikes" method="post">
+                    {% csrf_token %}
+
+                    <label for="dislikes">Edit dislikes</label>
+                    <textarea id="dislikes" rows="4" cols="50">{{ iuser.dislikes }}</textarea>
+
+                    <button class="dislikeButton" type="submit">
+                        edit
+                    </button>
+                </form>
+            </section>
+
+        </main>
 
     </body>
     
 {% endblock %}
 
 {% block script_tags %}
+
+    <script>
+        var idFromUrl = '{{ user_id }}';
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/linkTogether.js' %}"></script>
+
 {% endblock %}

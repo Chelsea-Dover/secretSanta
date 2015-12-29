@@ -26,6 +26,10 @@ exchangepatterns = [
 
 userpatterns = [
     url(r'^(?P<user_nameid>\d+)/$', 'santa_gift_exchange.views.profile', name='profile'),
+    url(r'^(?P<user_nameid>\d+)/updateprofile/$', 'santa_gift_exchange.views.updateprofile', name='edit_profile'),
+    url(r'^(?P<user_nameid>\d+)/updatedislike/$',
+        'santa_gift_exchange.views.updatedislike',
+        name='edit_dislike_profile'),
 ]
 
 urlpatterns = [

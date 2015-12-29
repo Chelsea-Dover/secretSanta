@@ -8,17 +8,22 @@ import datetime
 # class People(models.Model):
 
 
-# class MyUser(models.Model):
-#     user = models.OneToOneField(User)
-#
-#     def __str__(self):
-#         return self.user.username
-#
-#     class Meta:
-#         verbose_name_plural = u'User profiles'
+class MyUser(models.Model):
+    user = models.OneToOneField(User)
+
+    likes = models.CharField(max_length=500, blank=True)
+    dislikes = models.CharField(max_length=500, blank=True)
+    address = models.CharField(max_length=500, blank=True)
+
+    def __str__(self):
+        return self.user.username
+
+    class Meta:
+        verbose_name_plural = u'User profiles'
 
 
 class Participate(models.Model):
+    sent = models.BooleanField(default=False)
     giving = models.ForeignKey('self', related_name="givinggift", null=True, blank=True)
     getting = models.ForeignKey('self', related_name="gettinggift", null=True, blank=True)
     giveruser = models.ForeignKey(User, related_name='user')

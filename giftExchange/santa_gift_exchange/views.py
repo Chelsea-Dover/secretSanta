@@ -16,6 +16,7 @@ from django.core.urlresolvers import reverse
 import re
 from django.views.decorators.csrf import csrf_exempt
 from random import shuffle
+import json
 
 
 def register_user(request):
@@ -46,6 +47,9 @@ def register_user(request):
             # user = user_form.save()
             user.set_password(user.password)
             user.save()
+
+            new_user = MyUser(user=user)
+            new_user.save()
             print(user)
 
             # Create and save user profile
@@ -157,7 +161,9 @@ def profile(request, user_nameid):
 
     user_id = request.user.id
 
+    otheruser = User.objects.get(id=user_nameid)
 
+    username = otheruser.username
 
     participate = Participate.objects.filter(giveruser=user)
 
@@ -165,41 +171,33 @@ def profile(request, user_nameid):
 
     test = zip(participate, groups)
 
-    print(user_id)
-    print(user_nameid)
-    # Participate.group_set
-    # participate':participate, 'groups':groups
 
-    # {% for i in participate %}
-    #     <p>Assigned person: {{ i.giving.giveruser }}</p>
-    # {% endfor %}
+    iuser = MyUser.objects.get(user=otheruser)
+
+    # my_user = iuser.user_set.get(id= user_nameid)
+
+    # for i in my_user:
+
+
+    # my_user = User.myuser_set.get(id= user_nameid)
+
+    # user_likes = my_user.likes
     #
-    # {% for e in groups%}
-    #     <p>Exchange name: {{ e.group_name }}</p>
-    #     <!--{{ e.id }}-->
-    # {% endfor %}
+    # user_dislikes = my_user.dislikes
 
-    return render(request, 'profile.html', {'user': user, 'test':test, 'user_id':str(user_id), 'user_nameid':user_nameid})
+    return render(request, 'profile.html', {'user': user,
+                                            'test':test,
+                                            'user_id':str(user_id),
+                                            'user_nameid':user_nameid,
+                                            'username':username,
+                                            'iuser':iuser})
 
 def exchangeprofile(request, exchange_id):
     exchanges = Group.objects.get(id=exchange_id)
 
     elf = exchanges.elf.filter()
 
-    # print(exchanges.elf.filter())
 
-    # .giveruser.username.get()
-
-    # par = Participate.group_set
-
-    # print(par)
-    # print(par.user.username.get())
-
-    # users = User.participate_set
-    # user = par.id
-
-    # test = exchanges.elf
-    # ex = Group
     return render(request, 'exchange.html', {'id': exchange_id, 'exchanges':exchanges, 'elf':elf})
 
 def joinexchange(request):
@@ -289,10 +287,6 @@ def addsanta(request, exchange_id):
                     check_full(people_id)
                     # if second_to_last.getting is not None and second_to_last.giving is not None:
                         # people_id.pop()
-                # if len(people_id) >= 3:
-                #     second_to_last = group.elf.filter(id=people_id[-2])
-                #     elf.giving.add(second_to_last)
-                #     second_to_last.getting.add(elf)
             if elf.giving is None:
                 # print('6')
                 if len(people_id) >= 3:
@@ -335,7 +329,52 @@ def check_full(people_id):
         num += 1
 
 
+@csrf_exempt
+def updateprofile(request, user_nameid):
+    if request.method == 'POST':
+        update = request.POST.get("text")
 
+        # print("hello")
+
+        print(update)
+
+        print(user_nameid)
+
+        user = User.objects.get(id=user_nameid)
+
+        myuser = MyUser.objects.get(user=user)
+
+        myuser.likes = update
+        myuser.save()
+
+        return HttpResponse(
+            json.dumps({"nothing to see": "this isn't happening"})
+        )
+    else:
+        return HttpResponse(
+            json.dumps({"nothing to see": "this isn't happening"})
+        )
+
+
+@csrf_exempt
+def updatedislike(request, user_nameid):
+    if request.method == 'POST':
+        update = request.POST.get("text")
+
+        user = User.objects.get(id=user_nameid)
+
+        myuser = MyUser.objects.get(user=user)
+
+        myuser.dislikes = update
+        myuser.save()
+
+        return HttpResponse(
+            json.dumps({"nothing to see": "this isn't happening"})
+        )
+    else:
+        return HttpResponse(
+            json.dumps({"nothing to see": "this isn't happening"})
+        )
 
 # Create Participate from request.user
 
