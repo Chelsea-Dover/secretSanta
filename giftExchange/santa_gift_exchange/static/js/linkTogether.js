@@ -70,6 +70,15 @@ $('#post-assign').on('submit', function (event) {
     sendAjax();
 });
 
+$(' #editAddress ').on('submit', function(event) {
+    event.preventDefault();
+    var text = $(' #address ').val();
+    var secondPart = "updateadress";
+    console.log("Selling form submitted! Let's see if it goes through");  // sanity check
+    sendupdateajax(text, secondPart);
+    console.log(text);
+});
+
 
 
 $(' #editDislikes ').on('submit', function(event) {
@@ -91,8 +100,23 @@ $(' #editLikes ').on('submit', function(event) {
     console.log(text);
 });
 
+
+$(' .likesButton ').click(function(event){
+    $(' .editlikeWrapper ').toggleClass(' edit ');
+    $(' #likeId ').removeClass(' editLikeWrapper  ');
+    $(' .dislikes ').addClass('  ')
+});
+
+
 $(' .dislikeButton ').click(function(event){
     $(' .editDislikeWrapper ').toggleClass(' edit ');
     $(' #dislikeId ').removeClass(' editDislikeWrapper  ');
+    $(' .dislikes ').addClass('  ')
+});
+
+$(' .infoButton ').click(function(event){
+    event.stopPropagation();
+    $(' .editAddressWrapper ').toggleClass(' edit ');
+    $(' #infoId ').removeClass(' editAddressWrapper  ');
     $(' .dislikes ').addClass('  ')
 });

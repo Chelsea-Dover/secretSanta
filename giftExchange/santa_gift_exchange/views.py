@@ -330,6 +330,33 @@ def check_full(people_id):
 
 
 @csrf_exempt
+def updateadress(request, user_nameid):
+    if request.method == 'POST':
+        update = request.POST.get("text")
+
+        # print("hello")
+
+        print(update)
+
+        print(user_nameid)
+
+        user = User.objects.get(id=user_nameid)
+
+        myuser = MyUser.objects.get(user=user)
+
+        myuser.address = update
+        myuser.save()
+
+        return HttpResponse(
+            json.dumps({"nothing to see": "this isn't happening"})
+        )
+    else:
+        return HttpResponse(
+            json.dumps({"nothing to see": "this isn't happening"})
+        )
+
+
+@csrf_exempt
 def updateprofile(request, user_nameid):
     if request.method == 'POST':
         update = request.POST.get("text")

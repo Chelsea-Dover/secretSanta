@@ -4,7 +4,7 @@
 .edit {
 }
 
-.editDislikeWrapper, .editlikeWrapper, .editAddressWrapper {
+.editDislikeWrapper, .editLikeWrapper, .editAddressWrapper {
     display: none;
 }
 

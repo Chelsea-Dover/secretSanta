@@ -27,6 +27,8 @@
 
 
             <!-- Address -->
+
+
             <section>
                 <h3>
                     Contact info
@@ -42,7 +44,7 @@
 
             <!-- Edit address -->
 
-            <section class="editAddressWrapper">
+            <section id="infoId" class="editAddressWrapper">
                 <form id="editAddress" method="post">
                     {% csrf_token %}
 
@@ -72,15 +74,16 @@
 
             <!-- Edit Likes -->
 
-            <section class="editlikeWrapper">
+            <section id="likeId" class="editLikeWrapper">
                 <form id="editLikes" method="post">
                     {% csrf_token %}
 
-                    <label for="likes">Edit likes</label>
+                    <label for="likes">Edit dislikes</label>
                     <textarea id="likes" rows="4" cols="50">{{ iuser.likes }}</textarea>
 
-                    <input class="button" type="submit" value="finish editing!" />
-
+                    <button class="likeButton" type="submit">
+                        edit
+                    </button>
                 </form>
             </section>
 
