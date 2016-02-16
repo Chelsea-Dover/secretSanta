@@ -4,7 +4,7 @@
 .edit {
 }
 
-.editDislikeWrapper, .editLikeWrapper, .editAddressWrapper {
+.editDislikeWrapper, .editLikeWrapper, .editAddressWrapper, .dontShow {
     display: none;
 }
 
@@ -99,4 +99,61 @@ a {
 
 .exchangelist {
     margin: 0 17px;
+}
+
+main {
+    width: 287px;
+    margin: auto;
+    text-align: center;
+}
+
+.dislikeButton, .infoButton, .likesButton {
+    border: none;
+    background-color: transparent;
+    width: 2px;
+    display: inline-block;
+    /*background-image: url("https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png");*/
+    /*<img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png">*/
+}
+
+.icon {
+    display: inline-block;
+    width: 14px;
+    margin-bottom: 14px;
+}
+
+.dislikesIcon {
+    margin-left: 78px;
+    padding: 2px;
+}
+
+.infoIcon {
+    margin-left: 58px;
+    padding: 2px;
+}
+
+.likesIcon {
+    margin-left: 88px;
+    padding: 2px;
+}
+
+.profileHeader{
+    /*border: none;*/
+    /*background-color: white;*/
+    /*width: 2px;*/
+    display: inline-block;
+}
+
+.bigWrapper, .likes {
+    margin-top: 18px;
+    border: solid 1px #666;
+    padding-left: 13px;
+}
+
+.dislikes {
+    margin-right: 5px;
+}
+
+.textDislikes {
+    width: 200px;
 }

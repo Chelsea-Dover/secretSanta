@@ -29,96 +29,111 @@
             <!-- Address -->
 
 
-            <section>
-                <h3>
+            <section class="bigWrapper">
+                <h3 class="profileHeader">
                     Contact info
                 </h3>
-                    {{ iuser.address }}
+
+
                 {% if user_id == user_nameid %}
-                    <button class="infoButton">edddiiittt</button>
+                    <button class="infoButton">
+                    <img class="icon infoIcon" src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png">
+                    </button>
                 {% endif %}
-            </section>
 
 
+                <p class="dislikes">
+                    {{ iuser.address }}
+                </p>
 
 
-            <!-- Edit address -->
-
-            <section id="infoId" class="editAddressWrapper">
+                <section id="infoId" class="editAddressWrapper">
                 <form id="editAddress" method="post">
                     {% csrf_token %}
 
-                    <label for="address">Edit address</label>
+                    <label for="address">Edit contact info</label>
                     <textarea id="address" rows="4" cols="50">{{ iuser.address }}</textarea>
 
                     <button class="addressButton" type="submit">
                         edit
                     </button>
                 </form>
-            </section>
+                </section>
 
+
+            </section>
             <!-- Likes -->
 
 
             <section class="likes">
-                <h3>
+                <h3 class="profileHeader">
                     Likes
                 </h3>
-                {{ iuser.likes }}
+
+
                 {% if user_id == user_nameid %}
-                    <button class="likesButton"> edittttt </button>
+                    <button class="likesButton">
+                    <img class="icon likesIcon" src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png">
+                    </button>
                 {% endif %}
-            </section>
 
 
+                <p class="dislikes">
+                    {{ iuser.likes }}
+                </p>
 
-            <!-- Edit Likes -->
 
-            <section id="likeId" class="editLikeWrapper">
+                <section id="likeId" class="editLikeWrapper">
                 <form id="editLikes" method="post">
                     {% csrf_token %}
 
-                    <label for="likes">Edit dislikes</label>
+                    <label for="likes"></label>
                     <textarea id="likes" rows="4" cols="50">{{ iuser.likes }}</textarea>
 
                     <button class="likeButton" type="submit">
                         edit
                     </button>
                 </form>
+                </section>
+
+
             </section>
 
             <!-- Dislikes -->
 
 
 
-            <section>
-                <h3>
+            <section class="bigWrapper">
+
+                <h3 class="profileHeader">
                     Dislikes
                 </h3>
+
+                {% if user_id == user_nameid %}
+                    <button class="dislikeButton">
+                        <img class=" icon dislikesIcon" src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png">
+                    </button>
+                {% endif %}
+
                 <p class="dislikes">
                     {{ iuser.dislikes }}
                 </p>
-                {% if user_id == user_nameid %}
-                    <button class="dislikeButton">edddiiittt</button>
-                {% endif %}
-            </section>
 
 
-
-
-            <!-- Edit dislikes-->
-
-            <section id="dislikeId" class="editDislikeWrapper">
+                <section id="dislikeId" class="editDislikeWrapper">
                 <form id="editDislikes" method="post">
                     {% csrf_token %}
 
-                    <label for="dislikes">Edit dislikes</label>
-                    <textarea id="dislikes" rows="4" cols="50">{{ iuser.dislikes }}</textarea>
+                    <label for="dislikes"></label>
+                    <textarea class="textDislikes" id="dislikes" rows="4" cols="50">{{ iuser.dislikes }}</textarea>
 
                     <button class="dislikeButton" type="submit">
                         edit
                     </button>
                 </form>
+                </section>
+
+
             </section>
 
         </main>

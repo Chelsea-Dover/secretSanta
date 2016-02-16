@@ -104,19 +104,19 @@ $(' #editLikes ').on('submit', function(event) {
 $(' .likesButton ').click(function(event){
     $(' .editlikeWrapper ').toggleClass(' edit ');
     $(' #likeId ').removeClass(' editLikeWrapper  ');
-    $(' .dislikes ').addClass('  ')
+    $(' .dislikes ').addClass(' dontShow ')
 });
 
 
 $(' .dislikeButton ').click(function(event){
     $(' .editDislikeWrapper ').toggleClass(' edit ');
     $(' #dislikeId ').removeClass(' editDislikeWrapper  ');
-    $(' .dislikes ').addClass('  ')
+    $(' .dislikes ').addClass(' dontShow ')
 });
 
 $(' .infoButton ').click(function(event){
     event.stopPropagation();
     $(' .editAddressWrapper ').toggleClass(' edit ');
     $(' #infoId ').removeClass(' editAddressWrapper  ');
-    $(' .dislikes ').addClass('  ')
+    $(' .dislikes ').addClass(' dontShow ')
 });
