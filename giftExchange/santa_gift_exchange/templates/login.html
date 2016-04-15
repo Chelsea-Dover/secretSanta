@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link href='https://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/loginStyle.css' %}"/>
     <title>login</title>
 </head>
 
@@ -15,18 +16,22 @@
     </div>
 
 	{{ state }}
-	<form class="form" action="/login/" method="post">
-        {% csrf_token %}
-        {% if next %}
-        <input type="hidden" name="next" value="{{ next }}" />
-        {% endif %}
-        <input type="text" name="username" value="{{ username}}" placeholder="Username"/>
+    <main>
+        <div class="signInForm">
+            <form class="form" action="/login/" method="post">
+                {% csrf_token %}
+                {% if next %}
+                <input type="hidden" name="next" value="{{ next }}" />
+                {% endif %}
+                <input type="text" name="username" value="{{ username}}" placeholder="Username"/>
 
-        <input type="email" name="email" value="" placeholder="email"/>
+                <input type="email" name="email" value="" placeholder="email"/>
 
-        <input type="password" name="password" value="" placeholder="password"/>
+                <input type="password" name="password" value="" placeholder="password"/>
 
-        <input class="button" type="submit" value="Log In" />
-	</form>
+                <input class="button" type="submit" value="Log In" />
+            </form>
+        </div>
+    </main>
 </body>
 </html>
