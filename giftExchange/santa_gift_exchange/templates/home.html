@@ -8,26 +8,43 @@
 
 {% block content %}
 <body>
-    <form class="form" action="/exchange/create/" method="post">
-        {% csrf_token %}
-        <input type="text" name="gameName" value="" placeholder="Game name"/>
-        {{ form.first_name }}
+    <div class="createOrJoin">
+        <div class="homeFormWrapper">
+            <form class="form" action="/exchange/create/" method="post">
+                {% csrf_token %}
+                <input type="text" name="gameName" value="" placeholder="exchange name"/>
+                {{ form.first_name }}
 
-        <input class="button" type="submit" value="create game" />
-	</form>
+                <input class="button" type="submit" value="create exchange" />
+            </form>
 
-    <form class="form" action="/exchange/join/" method="post">
-        {% csrf_token %}
-        <input type="text" name="gamePass" value="" placeholder="Game pass">
-        {{ form.first_name }}
+            <form class="form" action="/exchange/join/" method="post">
+                {% csrf_token %}
+                <input type="text" name="gamePass" value="" placeholder="exchange password">
+                {{ form.first_name }}
 
-        <input class="button" type="submit" value="join game" />
-    </form>
-    <!--<div class="links">-->
-        <!--<a href="/game/">Join gift exchange!</a><br>-->
-        <!--<a href="/invite/">Create gift exchange!</a><br>-->
-        <!--</div>-->
+                <input class="button" type="submit" value="join exchange" />
+            </form>
+        </div>
+        <footer class="foot">
+            <p>This website was a project made by Chelsea Dover</p>
+            <p>For more information about Chelsea, visit chelseadover.com</p>
+        </footer>
+    </div>
+    <div id="mainBody" class="bgImg"></div>
+
+
 </body>
+
+{% endblock %}
+
+{% block script_tags %}
+    {% load staticfiles %}
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/homeJs.js' %}"></script>
+
 {% endblock %}
 
 {#FFD166#}

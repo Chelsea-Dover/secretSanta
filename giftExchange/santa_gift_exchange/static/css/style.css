@@ -1,21 +1,23 @@
-@import url(https://fonts.googleapis.com/css?family=Enriqueta);
+/*@import url(https://fonts.googleapis.com/css?family=Enriqueta);*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Ovo|Muli);
 
+/*.edit {*/
+/*}*/
 
-.edit {
-}
-
-.editDislikeWrapper, .editLikeWrapper, .editAddressWrapper, .dontShow {
-    display: none;
-}
+/*.editDislikeWrapper, .editLikeWrapper, .editAddressWrapper, .dontShow {*/
+    /*display: none;*/
+/*}*/
 
 body {
-    font-family: 'Istok Web', sans-serif;
+    /*font-family: 'Istok Web', sans-serif;*/
     margin: 0;
+    background-color: #FAF4FF;
     /*max-width: 1080px;*/
 }
 
  .nav > a {
-    color: #ffffff;
+    /*color: #ffffff;*/
      margin: 3px;
 }
 
@@ -29,9 +31,9 @@ body {
 
 nav {
     min-height: 40px;
-    background-color: #EA2A2A;
-    box-shadow: #040 0 0 20px;
-    border-bottom: #16440F solid 4px;
+    background-color: #C194D0;
+    /*box-shadow: #040 0 0 20px;*/
+    /*border-bottom: #16440F solid 4px;*/
 }
 
 .firsthalf {
@@ -53,107 +55,176 @@ nav {
 footer {
     text-align: center;
     color: #5B5858;
-    font-size: 10px;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
 }
 
-.exchanges {
-    border: solid 2px #16440F;
-    width: 15%;
-    /* display: inline-block; */
-    margin: 21px;
-    float: right;
-    list-style: none;
-    padding: 0;
-    max-width: 990px;
+.bgImg {
+    background-image: url('../img/christmas-xmas-gifts-presents.jpg');
+    background-size: 100%;
+    height: 95vh;
+    background-repeat: round;
 }
 
-.profileUser {
-    text-align: center;
-    font-family: 'Enriqueta', serif;
-    font-size: 72px;
-    line-height: 10px;
+.fadeToWhite {
+    background-size: 100%;
+    height: 95vh;
+    background:
+        linear-gradient(
+          rgb(255, 255, 255),
+          rgb(255, 255, 255)
+        ),
+        url('../img/christmas-xmas-gifts-presents.jpg');
 }
 
-li > a:visited {
-    color: #000;
-    text-decoration: none;
+input {
+    width: 200px;
+    height: 54px;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding-left: 36px;
+    margin-left: 31px;
 }
+
+.form {
+    margin-bottom: 16px;
+}
+/*.exchanges {*/
+    /*border: solid 2px #16440F;*/
+    /*width: 15%;*/
+    /*/!* display: inline-block; *!/*/
+    /*margin: 21px;*/
+    /*float: right;*/
+    /*list-style: none;*/
+    /*padding: 0;*/
+    /*max-width: 990px;*/
+/*}*/
+
+/*.profileUser {*/
+    /*text-align: center;*/
+    /*font-family: 'Enriqueta', serif;*/
+    /*font-size: 72px;*/
+    /*line-height: 10px;*/
+/*}*/
+
+/*li > a:visited {*/
+    /*color: #000;*/
+    /*text-decoration: none;*/
+/*}*/
 
 a {
     text-decoration: none;
 }
 
-.sentbutton {
-    width: 71px;
-    border-radius: 22px;
-    border: solid #EA2A2A 2px;
-    background-color: #FF3333;
-    color: #FFF;
-    margin-left: 10%;
+.secondhalf > a {
+    color: #e7e1eb;
+    font-family: 'Muli', sans-serif;
+    margin-right: 12px;
 }
 
-.listheader {
-    font-family: 'Enriqueta', serif;
-    text-align: center;
+.secondhalf > a:hover {
+    color: #FFF7D8;
 }
 
-.exchangelist {
-    margin: 0 17px;
+.homeFormWrapper {
+    width: 493px;
+    margin-left: 35%;
+    margin-right: 25%;
+    padding-top: 30vh;
+    float: left;
 }
 
-main {
-    width: 287px;
-    margin: auto;
-    text-align: center;
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #E8E8E8 inset;
 }
 
-.dislikeButton, .infoButton, .likesButton {
-    border: none;
-    background-color: transparent;
-    width: 2px;
-    display: inline-block;
-    /*background-image: url("https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png");*/
-    /*<img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png">*/
+textarea:focus, input:focus{
+    outline: none;
 }
-
-.icon {
-    display: inline-block;
-    width: 14px;
-    margin-bottom: 14px;
+.button {
+    width: 300px;
+    margin-left: 0;
+    padding-left: 11px;
 }
+/*.sentbutton {*/
+    /*width: 71px;*/
+    /*border-radius: 22px;*/
+    /*border: solid #EA2A2A 2px;*/
+    /*background-color: #FF3333;*/
+    /*color: #FFF;*/
+    /*margin-left: 10%;*/
+/*}*/
 
-.dislikesIcon {
-    margin-left: 78px;
-    padding: 2px;
-}
+/*.listheader {*/
+    /*font-family: 'Enriqueta', serif;*/
+    /*text-align: center;*/
+/*}*/
 
-.infoIcon {
-    margin-left: 58px;
-    padding: 2px;
-}
+/*.exchangelist {*/
+    /*margin: 0 17px;*/
+/*}*/
 
-.likesIcon {
-    margin-left: 88px;
-    padding: 2px;
-}
+/*main {*/
+    /*width: 287px;*/
+    /*margin: auto;*/
+    /*text-align: center;*/
+/*}*/
 
-.profileHeader{
+/*.dislikeButton, .infoButton, .likesButton {*/
     /*border: none;*/
-    /*background-color: white;*/
+    /*background-color: transparent;*/
     /*width: 2px;*/
-    display: inline-block;
-}
+    /*display: inline-block;*/
+    /*/!*background-image: url("https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png");*!/*/
+    /*/!*<img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png">*!/*/
+/*}*/
 
-.bigWrapper, .likes {
-    margin-top: 18px;
-    border: solid 1px #666;
-    padding-left: 13px;
-}
+/*.icon {*/
+    /*display: inline-block;*/
+    /*width: 14px;*/
+    /*margin-bottom: 14px;*/
+/*}*/
 
-.dislikes {
-    margin-right: 5px;
-}
+/*.dislikesIcon {*/
+    /*margin-left: 78px;*/
+    /*padding: 2px;*/
+/*}*/
 
-.textDislikes {
-    width: 200px;
-}
+/*.infoIcon {*/
+    /*margin-left: 58px;*/
+    /*padding: 2px;*/
+/*}*/
+
+/*.likesIcon {*/
+    /*margin-left: 88px;*/
+    /*padding: 2px;*/
+/*}*/
+
+/*.profileHeader{*/
+    /*/!*border: none;*!/*/
+    /*/!*background-color: white;*!/*/
+    /*/!*width: 2px;*!/*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.bigWrapper, .likes {*/
+    /*margin-top: 18px;*/
+    /*border: solid 1px #666;*/
+    /*padding-left: 13px;*/
+/*}*/
+
+/*.dislikes {*/
+    /*margin-right: 5px;*/
+/*}*/
+
+/*.textDislikes {*/
+    /*width: 200px;*/
+/*}*/
+

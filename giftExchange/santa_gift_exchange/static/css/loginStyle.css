@@ -8,6 +8,7 @@ body {
     color: #828A95;
 }
 
+
 a {
     color: #4D5259;
     text-decoration: none;
@@ -33,7 +34,6 @@ input {
     margin-right: 18px;
 }
 
-/* Change the white to any color ;) */
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px #E8E8E8 inset;
 }
@@ -41,4 +41,8 @@ input:-webkit-autofill {
 .button {
     width: 237px;
     margin-left: -16px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }
