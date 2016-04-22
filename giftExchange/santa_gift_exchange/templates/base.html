@@ -12,14 +12,14 @@
     <div>
         <nav>
             <div class="nav firsthalf">
-                <a href="#">
+                <a href="/home/">
                     <img class="logo" src='{% static "img/giftLogo.png" %}'>
                 </a>
             </div>
 
             <div class="nav secondhalf">
                 <a href="/logout/">Logout</a>
-                <a href="/home/">Home</a>
+{#                <a href="/home/">Home</a>#}
                 <a href="/profile/{{ user.id }}/">{{ user }}</a>
             </div>
         </nav>

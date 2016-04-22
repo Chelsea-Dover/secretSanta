@@ -2,13 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Ovo|Muli);
 
-/*.edit {*/
-/*}*/
-
-/*.editDislikeWrapper, .editLikeWrapper, .editAddressWrapper, .dontShow {*/
-    /*display: none;*/
-/*}*/
-
 body {
     /*font-family: 'Istok Web', sans-serif;*/
     margin: 0;
@@ -96,41 +89,19 @@ input {
 .form {
     margin-bottom: 16px;
 }
-/*.exchanges {*/
-    /*border: solid 2px #16440F;*/
-    /*width: 15%;*/
-    /*/!* display: inline-block; *!/*/
-    /*margin: 21px;*/
-    /*float: right;*/
-    /*list-style: none;*/
-    /*padding: 0;*/
-    /*max-width: 990px;*/
-/*}*/
-
-/*.profileUser {*/
-    /*text-align: center;*/
-    /*font-family: 'Enriqueta', serif;*/
-    /*font-size: 72px;*/
-    /*line-height: 10px;*/
-/*}*/
-
-/*li > a:visited {*/
-    /*color: #000;*/
-    /*text-decoration: none;*/
-/*}*/
 
 a {
     text-decoration: none;
 }
 
 .secondhalf > a {
-    color: #e7e1eb;
+    color: #FAF4FF;
     font-family: 'Muli', sans-serif;
     margin-right: 12px;
 }
 
 .secondhalf > a:hover {
-    color: #FFF7D8;
+    color: #F3DDFF;
 }
 
 .homeFormWrapper {
@@ -152,79 +123,120 @@ textarea:focus, input:focus{
     width: 300px;
     margin-left: 0;
     padding-left: 11px;
+    color: #FFF;
 }
-/*.sentbutton {*/
-    /*width: 71px;*/
-    /*border-radius: 22px;*/
-    /*border: solid #EA2A2A 2px;*/
+
+/*-----PROFILE STYLE---*/
+
+.exchanges {
+    border: solid 2px #16440F;
+    width: 15%;
+    /* display: inline-block; */
+    margin: 21px;
+    float: right;
+    list-style: none;
+    padding: 0;
+    max-width: 990px;
+}
+
+.edit {
+}
+
+.editDislikeWrapper, .editLikeWrapper, .editAddressWrapper, .dontShow {
+    display: none;
+}
+
+.sentbutton {
+    width: 71px;
+    border-radius: 22px;
+    border: none;
     /*background-color: #FF3333;*/
-    /*color: #FFF;*/
-    /*margin-left: 10%;*/
-/*}*/
+    color: #FFF;
+    margin-left: 10%;
+}
 
-/*.listheader {*/
-    /*font-family: 'Enriqueta', serif;*/
-    /*text-align: center;*/
-/*}*/
+.listheader {
+    font-family: 'Enriqueta', serif;
+    text-align: center;
+}
 
-/*.exchangelist {*/
-    /*margin: 0 17px;*/
-/*}*/
+.exchangelist {
+    margin: 0 17px;
+}
 
-/*main {*/
-    /*width: 287px;*/
-    /*margin: auto;*/
-    /*text-align: center;*/
-/*}*/
+main {
+    width: 287px;
+    margin: auto;
+    text-align: center;
+}
 
-/*.dislikeButton, .infoButton, .likesButton {*/
+.dislikeButton, .infoButton, .likesButton {
+    border: none;
+    background-color: transparent;
+    width: 2px;
+    display: inline-block;
+    /*background-image: url("https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png");*/
+    /*<img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png">*/
+}
+
+.icon {
+    display: inline-block;
+    width: 14px;
+    margin-bottom: 14px;
+}
+
+.dislikesIcon {
+    margin-left: 78px;
+    padding: 2px;
+}
+
+.infoIcon {
+    margin-left: 58px;
+    padding: 2px;
+}
+
+.likesIcon {
+    margin-left: 88px;
+    padding: 2px;
+}
+
+.profileHeader{
     /*border: none;*/
-    /*background-color: transparent;*/
+    /*background-color: white;*/
     /*width: 2px;*/
-    /*display: inline-block;*/
-    /*/!*background-image: url("https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png");*!/*/
-    /*/!*<img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png">*!/*/
-/*}*/
+    display: inline-block;
+}
 
-/*.icon {*/
-    /*display: inline-block;*/
-    /*width: 14px;*/
-    /*margin-bottom: 14px;*/
-/*}*/
+.bigWrapper, .likes {
+    margin-top: 18px;
+    border: solid 1px #666;
+    padding-left: 13px;
+}
 
-/*.dislikesIcon {*/
-    /*margin-left: 78px;*/
-    /*padding: 2px;*/
-/*}*/
+.dislikes {
+    margin-right: 5px;
+}
 
-/*.infoIcon {*/
-    /*margin-left: 58px;*/
-    /*padding: 2px;*/
-/*}*/
+.textDislikes {
+    width: 200px;
+}
 
-/*.likesIcon {*/
-    /*margin-left: 88px;*/
-    /*padding: 2px;*/
-/*}*/
+.profileUser {
+    text-align: center;
+    font-family: 'Enriqueta', serif;
+    font-size: 72px;
+    line-height: 10px;
+}
 
-/*.profileHeader{*/
-    /*/!*border: none;*!/*/
-    /*/!*background-color: white;*!/*/
-    /*/!*width: 2px;*!/*/
-    /*display: inline-block;*/
-/*}*/
+li > a:visited {
+    color: #000;
+    text-decoration: none;
+}
 
-/*.bigWrapper, .likes {*/
-    /*margin-top: 18px;*/
-    /*border: solid 1px #666;*/
-    /*padding-left: 13px;*/
-/*}*/
 
-/*.dislikes {*/
-    /*margin-right: 5px;*/
-/*}*/
-
-/*.textDislikes {*/
-    /*width: 200px;*/
-/*}*/
-
+.profileBody {
+    /*background-image: url('../img/profile_img.jpg');*/
+    background-size: 100%;
+    height: 95vh;
+    background-repeat: round;
+}
