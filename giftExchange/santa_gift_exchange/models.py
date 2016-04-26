@@ -3,9 +3,6 @@ from django.contrib.auth.models import User
 import datetime
 
 # Create your models here.
-# s
-
-# class People(models.Model):
 
 
 class MyUser(models.Model):

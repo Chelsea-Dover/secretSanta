@@ -48,7 +48,7 @@
 
 
                 <section id="infoId" class="editAddressWrapper">
-                <form id="editAddress" method="post">
+                <form id="editAddress" class="infoForm" method="post">
                     {% csrf_token %}
 
                     <label for="address">Edit contact info</label>
@@ -84,7 +84,7 @@
 
 
                 <section id="likeId" class="editLikeWrapper">
-                <form id="editLikes" method="post">
+                <form id="editLikes" class="infoForm" method="post">
                     {% csrf_token %}
 
                     <label for="likes"></label>
@@ -110,7 +110,7 @@
                 </h3>
 
                 {% if user_id == user_nameid %}
-                    <button class="dislikeButton">
+                    <button class="dislikeIcon">
                         <img class=" icon dislikesIcon" src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png">
                     </button>
                 {% endif %}
@@ -121,7 +121,7 @@
 
 
                 <section id="dislikeId" class="editDislikeWrapper">
-                <form id="editDislikes" method="post">
+                <form id="editDislikes" class="infoForm" method="post">
                     {% csrf_token %}
 
                     <label for="dislikes"></label>

@@ -108,7 +108,7 @@ $(' .likesButton ').click(function(event){
 });
 
 
-$(' .dislikeButton ').click(function(event){
+$(' .dislikeIcon ').click(function(event){
     $(' .editDislikeWrapper ').toggleClass(' edit ');
     $(' #dislikeId ').removeClass(' editDislikeWrapper  ');
     $(' .dislikes ').addClass(' dontShow ')

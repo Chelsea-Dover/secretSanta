@@ -5,7 +5,7 @@
 body {
     /*font-family: 'Istok Web', sans-serif;*/
     margin: 0;
-    background-color: #FAF4FF;
+    background-color: #FFF;
     /*max-width: 1080px;*/
 }
 
@@ -24,9 +24,9 @@ body {
 
 nav {
     min-height: 40px;
-    background-color: #C194D0;
+    background-color: #48ACF0;
     /*box-shadow: #040 0 0 20px;*/
-    /*border-bottom: #16440F solid 4px;*/
+    border-bottom: #44E5E7 solid 4px;
 }
 
 .firsthalf {
@@ -75,7 +75,7 @@ footer {
         url('../img/christmas-xmas-gifts-presents.jpg');
 }
 
-input, .addressButton, .likesButton, .dislikeButton {
+input, .addressButton, .likeButton, .dislikeButton {
     width: 200px;
     height: 54px;
     font-size: 20px;
@@ -119,7 +119,7 @@ input:-webkit-autofill {
 textarea:focus, input:focus{
     outline: none;
 }
-.button, .addressButton {
+.button, .addressButton, .likeButton, .dislikeButton {
     width: 300px;
     margin-left: 0;
     padding-left: 11px;
@@ -129,7 +129,7 @@ textarea:focus, input:focus{
 /*-----PROFILE STYLE---*/
 
 .exchanges {
-    border: solid 2px #16440F;
+    /*border: solid 2px #16440F;*/
     width: 15%;
     /* display: inline-block; */
     margin: 21px;
@@ -175,7 +175,7 @@ main {
     text-align: center;
 }
 
-.dislikeButton, .infoButton, .likesButton {
+.infoButton, .likesButton, .dislikeIcon {
     border: none;
     background-color: transparent;
     width: 2px;
@@ -201,7 +201,7 @@ main {
 
 }
 
-.infoButton:focus, .likesButton:focus, .dislikeButton:focus {
+.infoButton:focus, .likesButton:focus, .dislikeIcon:focus {
     outline: none;
 }
 
@@ -238,7 +238,7 @@ main {
 
 .profileUser {
     text-align: center;
-    font-family: 'Enriqueta', serif;
+    font-family: 'Muli', sans-serif;
     font-size: 72px;
     line-height: 10px;
 }
@@ -254,4 +254,10 @@ li > a:visited {
     background-size: 100%;
     height: 95vh;
     background-repeat: round;
+}
+
+.infoForm {
+    width: 319px;
+    margin: auto;
+
 }
