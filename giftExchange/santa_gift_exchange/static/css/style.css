@@ -75,7 +75,7 @@ footer {
         url('../img/christmas-xmas-gifts-presents.jpg');
 }
 
-input {
+input, .addressButton, .likesButton, .dislikeButton {
     width: 200px;
     height: 54px;
     font-size: 20px;
