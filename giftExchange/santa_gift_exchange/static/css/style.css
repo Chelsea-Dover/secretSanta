@@ -119,7 +119,7 @@ input:-webkit-autofill {
 textarea:focus, input:focus{
     outline: none;
 }
-.button {
+.button, .addressButton {
     width: 300px;
     margin-left: 0;
     padding-left: 11px;
@@ -146,6 +146,11 @@ textarea:focus, input:focus{
     display: none;
 }
 
+.editAddress{
+    width: 422px;
+    margin: auto;
+}
+
 .sentbutton {
     width: 71px;
     border-radius: 22px;
@@ -165,7 +170,7 @@ textarea:focus, input:focus{
 }
 
 main {
-    width: 287px;
+    width: 530px;
     margin: auto;
     text-align: center;
 }
@@ -186,17 +191,26 @@ main {
 }
 
 .dislikesIcon {
-    margin-left: 78px;
+    margin-left: 210px;
     padding: 2px;
 }
 
 .infoIcon {
-    margin-left: 58px;
+    margin-left: 191px;
     padding: 2px;
+
 }
 
+.infoButton:focus, .likesButton:focus, .dislikeButton:focus {
+    outline: none;
+}
+
+/*.infoIcon:focus {*/
+    /*outline: none;*/
+/*}*/
+
 .likesIcon {
-    margin-left: 88px;
+    margin-left: 221px;
     padding: 2px;
 }
 
@@ -210,7 +224,8 @@ main {
 .bigWrapper, .likes {
     margin-top: 18px;
     border: solid 1px #666;
-    padding-left: 13px;
+    padding-bottom: 22px;
+    /*padding-left: 13px;*/
 }
 
 .dislikes {
