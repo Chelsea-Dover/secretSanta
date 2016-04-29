@@ -1,29 +1,29 @@
 
 {% extends "base.html" %}
 
-
 {% block content %}
 {% load staticfiles %}
     <body class="profileBody">
         <h1 class="profileUser">{{ username }}</h1>
 
+        <span class="wrapperToRuleThemAll">
         {% if user_id == user_nameid %}
-                <ul class="exchanges">
-                    <li class="listheader">
-                        <h3>Exchanges</h3>
-                    </li>
-                    {% for x, y in test %}
-                        <li class="exchangelist">
-                            <a href="/exchange/{{ y.id }}"><p>Exchange name: {{ y.group_name }}</p></a>
-                            {% if user_id == user_nameid %}
-                                <button class="sentbutton"> Sent gift </button>
-                            {% endif %}
-                            <a href="/profile/{{ x.giving.giveruser.id }}/"><p>Assigned person: {{ x.giving.giveruser }}</p></a>
+                    <ul class="exchanges">
+                        <li class="listheader">
+                            <h3>Exchanges</h3>
                         </li>
-                    {% endfor %}
-                </ul>
-        {% endif %}
-        <main>
+                        {% for x, y in test %}
+                            <li class="exchangelist">
+                                <a href="/exchange/{{ y.id }}"><p>Exchange name: {{ y.group_name }}</p></a>
+                                {% if user_id == user_nameid %}
+                                    <button class="sentbutton"> Sent gift </button>
+                                {% endif %}
+                                <a href="/profile/{{ x.giving.giveruser.id }}/"><p>Assigned person: {{ x.giving.giveruser }}</p></a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+            {% endif %}
+            <main>
 
 
             <!-- Address -->
@@ -98,6 +98,7 @@
 
 
             </section>
+        </span>
 
             <!-- Dislikes -->
 

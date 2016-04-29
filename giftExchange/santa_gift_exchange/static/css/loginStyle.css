@@ -1,13 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Ovo|Muli);
 
 body {
-    background-image: url('../img/christmas-xmas-gifts-presents.jpg');
+    /*background-image: url('../img/christmas-xmas-gifts-presents.jpg');*/
     margin: 0;
     background-size: 100%;
     font-family: 'Ovo', serif;
     color: #828A95;
 }
-
 
 a {
     color: #4D5259;

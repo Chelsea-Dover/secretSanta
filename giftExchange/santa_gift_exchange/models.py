@@ -25,11 +25,16 @@ class Participate(models.Model):
     getting = models.ForeignKey('self', related_name="gettinggift", null=True, blank=True)
     giveruser = models.ForeignKey(User, related_name='user')
 
+    def __str__(self):
+        return self.giveruser
 
 class Group(models.Model):
     group_name = models.CharField(max_length=120, default=None)
     elf = models.ManyToManyField(Participate)
     revival_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.group_name
 
     def save(self):
         from datetime import timedelta
